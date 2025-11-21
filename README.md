@@ -43,7 +43,6 @@ Clean UI using Tailwind + reusable components.
 
 4. Installation
 Backend (Django):
-cd backend
 python -m venv .venv
 venv\Scripts\activate (For virtual env activate)
 pip install -r requirements.txt
