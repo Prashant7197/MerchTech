@@ -24,16 +24,6 @@ def load_sales():
 
 
 def _normalize_meta_value(val):
-    """
-    Converts ANY metadata value into a valid dictionary.
-    Handles:
-    - dict
-    - string
-    - number
-    - list of dicts
-    - list of values
-    - None
-    """
     if isinstance(val, dict):
         return val
 
@@ -57,7 +47,6 @@ def _normalize_meta_value(val):
                 "title": str(first)
             }
 
-    # number, boolean, None, etc.
     return {
         "product_name": str(val),
         "title": str(val)
@@ -73,7 +62,7 @@ def load_metadata():
 
             clean_meta = {}
 
-            # handle dict JSON
+            # handle dict of JSON
             if isinstance(j, dict):
                 for key, val in j.items():
                     key_lower = str(key).lower()
@@ -82,7 +71,7 @@ def load_metadata():
                     clean_meta[str(key)] = val
                 return clean_meta
 
-            # handle list JSON
+            # handle list of JSON
             if isinstance(j, list):
                 meta = {}
                 for item in j:
@@ -90,7 +79,6 @@ def load_metadata():
                     if asin:
                         meta[str(asin)] = item
                 return meta
-
-    # fallback
+            
     return {}
 

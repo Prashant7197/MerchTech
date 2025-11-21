@@ -10,10 +10,6 @@ from .services.aggregator import build_product_insights
 
 
 def normalize_metadata(metadata):
-    """
-    Ensures metadata is always a dict:
-    { asin: {product metadata} }
-    """
     if isinstance(metadata, dict):
         return metadata
 
@@ -26,24 +22,23 @@ def normalize_metadata(metadata):
                 normalized[asin] = item
         return normalized
 
-    return {}  # fallback
+    return {}
 
 
 @api_view(["GET"])
 def analyze_all(request):
-    # Load datasets
     reviews_df = load_reviews()
     returns_df = load_returns()
     sales_df = load_sales()
     metadata_raw = load_metadata()
     metadata = normalize_metadata(metadata_raw)
 
-    # Run analyses
+    # Run analyses part
     reviews_summary = analyze_reviews_sentiment(reviews_df)
     return_reasons_map, return_counts = analyze_returns_summary(returns_df)
     sales_summary = analyze_sales_summary(sales_df)
 
-    # Build final output
+    # Build final output part
     insights = build_product_insights(
         reviews_summary, return_reasons_map, return_counts, sales_summary, metadata
     )
@@ -67,7 +62,7 @@ def analyze_product(request, asin):
         reviews_summary, return_reasons_map, return_counts, sales_summary, metadata
     )
 
-    # Return only this product
+    # Return only this product with asin id
     for item in insights:
         if str(item.get("asin")).lower() == str(asin).lower():
             return Response(item)

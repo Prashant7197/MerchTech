@@ -1,12 +1,8 @@
 import numpy as np
 from collections import defaultdict
 
-
+# Normalizes metadata for a single ASIN. Ensures meta is always a DICTIONARY.
 def normalize_metadata(meta):
-    """
-    Normalizes metadata for a single ASIN.
-    Ensures meta is always a DICTIONARY.
-    """
     if isinstance(meta, dict):
         return meta
 
@@ -29,7 +25,7 @@ def normalize_metadata(meta):
                 }
         return {}
 
-    # anything else → fallback
+    # anything else fallback
     return {}
 
 
@@ -77,8 +73,6 @@ def build_product_insights(
 
         issues = []
         actions = []
-
-        # ---- RULES ----
 
         if gmv < median_gmv:
             issues.append("Low GMV vs peer median")
@@ -136,9 +130,6 @@ def build_product_insights(
 
         insights.append(insight)
 
-    # Sorting: 
-    # 1️⃣ Highest number of issues first
-    # 2️⃣ For tie → lowest GMV first
     insights.sort(key=lambda x: (-len(x["top_issues"]), x["metrics"]["gmv"]))
 
     return insights

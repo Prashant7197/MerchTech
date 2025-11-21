@@ -12,10 +12,6 @@ def _clean_text(s: str) -> str:
     return s
 
 def analyze_reviews_sentiment(reviews_df: pd.DataFrame):
-    """
-    Returns dict:
-      { asin: { avg_rating, total_reviews, avg_sentiment, negative_reviews: [texts] } }
-    """
     if reviews_df is None or reviews_df.empty:
         return {}
 

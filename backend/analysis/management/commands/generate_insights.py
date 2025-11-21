@@ -15,23 +15,23 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         try:
-            # 1️⃣ Load datasets
+            # Load datasets
             reviews_df = load_reviews()
             returns_df = load_returns()
             sales_df = load_sales()
             metadata = load_metadata()
 
-            # 2️⃣ Analyze datasets
+            # Analyze datasets
             reviews_summary = analyze_reviews_sentiment(reviews_df)
             return_reasons_map, return_counts = analyze_returns_summary(returns_df)
             sales_summary = analyze_sales_summary(sales_df)
 
-            # 3️⃣ Generate insights
+            # Generate insights
             insights = build_product_insights(
                 reviews_summary, return_reasons_map, return_counts, sales_summary, metadata
             )
 
-            # 4️⃣ Save insights to JSON file
+            # Save insights to JSON file
             output_path = os.path.join(getattr(settings, "DATA_DIR"), "insights_auto.json")
             with open(output_path, "w", encoding="utf-8") as f:
                 json.dump(insights, f, indent=2)

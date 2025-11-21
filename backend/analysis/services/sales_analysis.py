@@ -1,9 +1,6 @@
 import pandas as pd
 
 def analyze_sales_summary(sales_df: pd.DataFrame):
-    """
-    Returns: { asin: { total_units_sold, total_gmv, total_refunds, weekly: [{week, units_sold, gmv}], ... } }
-    """
     if sales_df is None or sales_df.empty:
         return {}
 
