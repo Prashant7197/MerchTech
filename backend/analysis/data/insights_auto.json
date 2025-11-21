@@ -1,0 +1,193 @@
+[
+  {
+    "asin": "ASIN-1001",
+    "product_name": "ASIN ASIN-1001",
+    "category": null,
+    "metrics": {
+      "gmv": 3978.0,
+      "units_sold": 133,
+      "refunds": 13,
+      "avg_rating": 3.0,
+      "total_reviews": 5,
+      "avg_sentiment": 0.28,
+      "return_rate": 0.083
+    },
+    "top_return_reasons": {
+      "Damaged item": 10,
+      "Wrong color": 1
+    },
+    "top_review_keywords": [
+      "color",
+      "mismatch",
+      "described",
+      "great",
+      "product",
+      "good"
+    ],
+    "top_issues": [
+      "Low GMV vs peer median"
+    ],
+    "suggested_actions": [
+      "Investigate visibility, repricing, or marketing for this product",
+      "Enhance QC and packaging process"
+    ],
+    "weekly_sales": [
+      {
+        "asin": "ASIN-1001",
+        "week": 1,
+        "units_sold": 13,
+        "gmv": 875,
+        "refunds": 4
+      },
+      {
+        "asin": "ASIN-1001",
+        "week": 2,
+        "units_sold": 30,
+        "gmv": 844,
+        "refunds": 5
+      },
+      {
+        "asin": "ASIN-1001",
+        "week": 3,
+        "units_sold": 44,
+        "gmv": 1623,
+        "refunds": 4
+      },
+      {
+        "asin": "ASIN-1001",
+        "week": 4,
+        "units_sold": 46,
+        "gmv": 636,
+        "refunds": 0
+      }
+    ]
+  },
+  {
+    "asin": "ASIN-1000",
+    "product_name": "ASIN ASIN-1000",
+    "category": null,
+    "metrics": {
+      "gmv": 4095.0,
+      "units_sold": 100,
+      "refunds": 12,
+      "avg_rating": 2.8,
+      "total_reviews": 5,
+      "avg_sentiment": 0.26,
+      "return_rate": 0.1
+    },
+    "top_return_reasons": {
+      "Defective product": 4,
+      "Late delivery": 6
+    },
+    "top_review_keywords": [
+      "wrong",
+      "item",
+      "works",
+      "expected",
+      "great",
+      "product",
+      "good"
+    ],
+    "top_issues": [
+      "Low average rating (< 3.0)"
+    ],
+    "suggested_actions": [
+      "Improve listing quality, description accuracy, and images",
+      "Enhance QC and packaging process",
+      "Improve shipping SLA accuracy and courier performance"
+    ],
+    "weekly_sales": [
+      {
+        "asin": "ASIN-1000",
+        "week": 1,
+        "units_sold": 16,
+        "gmv": 772,
+        "refunds": 3
+      },
+      {
+        "asin": "ASIN-1000",
+        "week": 2,
+        "units_sold": 32,
+        "gmv": 1621,
+        "refunds": 4
+      },
+      {
+        "asin": "ASIN-1000",
+        "week": 3,
+        "units_sold": 30,
+        "gmv": 805,
+        "refunds": 3
+      },
+      {
+        "asin": "ASIN-1000",
+        "week": 4,
+        "units_sold": 22,
+        "gmv": 897,
+        "refunds": 2
+      }
+    ]
+  },
+  {
+    "asin": "ASIN-1002",
+    "product_name": "ASIN ASIN-1002",
+    "category": null,
+    "metrics": {
+      "gmv": 4593.0,
+      "units_sold": 152,
+      "refunds": 7,
+      "avg_rating": 3.8,
+      "total_reviews": 5,
+      "avg_sentiment": 0.4,
+      "return_rate": 0.026
+    },
+    "top_return_reasons": {
+      "Late delivery": 1,
+      "Size mismatch": 3
+    },
+    "top_review_keywords": [
+      "great",
+      "product",
+      "good",
+      "value",
+      "wrong",
+      "item",
+      "fast",
+      "delivery"
+    ],
+    "top_issues": [],
+    "suggested_actions": [
+      "Improve shipping SLA accuracy and courier performance",
+      "Improve sizing chart and provide fit photos"
+    ],
+    "weekly_sales": [
+      {
+        "asin": "ASIN-1002",
+        "week": 1,
+        "units_sold": 37,
+        "gmv": 675,
+        "refunds": 1
+      },
+      {
+        "asin": "ASIN-1002",
+        "week": 2,
+        "units_sold": 35,
+        "gmv": 1602,
+        "refunds": 5
+      },
+      {
+        "asin": "ASIN-1002",
+        "week": 3,
+        "units_sold": 39,
+        "gmv": 1227,
+        "refunds": 0
+      },
+      {
+        "asin": "ASIN-1002",
+        "week": 4,
+        "units_sold": 41,
+        "gmv": 1089,
+        "refunds": 1
+      }
+    ]
+  }
+]
